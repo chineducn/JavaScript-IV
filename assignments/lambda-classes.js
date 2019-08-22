@@ -23,11 +23,28 @@ class Instructor extends Human {
         console.log(`Today we are learning about ${subject}`);
     }
 
-    grade(student) {}
+    grade(student, subject) {
+        console.log(`${studemt} receives a perfect score on ${subject}`)
+    }
 }
 
+class Student extends Person {
+    constructor(name, age, location, previousBackground, className, favSubjects) {
+        super(name, age, location);
+        this.previousBackground = previousBackground;
+        this.className = className;
+        this.favSubjects = [];
+    }
+
+    listsSubjects() {
+
+    }
+
+    PRAssignment
+}
 
 //  Testing code
-let prime = new Human('Austen', 50, 'San Francisco')
-prime.speak()
-let shades = new Instructor('Gabe', 60, 'Utah', 'Torture', '', `I'm going to get fired.`)
+// let prime = new Human('Austen', 50, 'San Francisco');
+// prime.speak();
+// let shades = new Instructor('Gabe', 60, 'Utah', 'Torture', 'ketchup', `I'm going to get fired.`);
+// shades.speak()
