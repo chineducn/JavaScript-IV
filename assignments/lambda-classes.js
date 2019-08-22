@@ -41,7 +41,7 @@ class Student extends Human {
     }
 
     PRAssignment(subject) {
-        console.log(`The ${this.name} has submitted a PR for ${subject}`);
+        console.log(`${this.name} has submitted a PR for ${subject}`);
     }
 
     sprintChallenge(subject) {
@@ -60,7 +60,7 @@ class TeamLead extends Instructor {
         console.log(`${this.name} announces to ${channel}, @channel standy times`)
     }
 
-    debugsCode({Student},subject) {
+    debugsCode(student,subject) {
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
     }
 }
@@ -72,7 +72,7 @@ let prime = new Human('Austen', 50, 'San Francisco');
 let primejr = new Human('Ally', 55, 'San Junipero');
 let shades = new Instructor('Gabe', 60, 'Utah', 'Torture', 'ketchup', `I'm going to get fired.`);
 let bigGuy = new Instructor('Jamie', 45, 'Carlifornia', 'React', 'Klingon', 'Trust the process');
-let baggins = new Student('frodo', 200, 'middle earth', 'farmer', 'da fellowship', ['brooding', 'walking', 'precious'])
+let baggins = new Student('Frodo', 200, 'middle earth', 'farmer', 'da fellowship', ['brooding', 'walking', 'precious'])
 let ears = new Student('Legolas', 300, 'The Vale', 'being young', 'da fellowship', 'targetting')
 let cheeky = new TeamLead('Patrick', 50, 'bedrock', 'jokes', 'js', 'May the stretch be with you', 'webeu1', 'Gabe');
 let helpful = new TeamLead('Flint', 87, 'lambda', 'TL hours', 'All', 'I am already ready', 'webeu1', 'Gabe');
@@ -83,7 +83,9 @@ let helpful = new TeamLead('Flint', 87, 'lambda', 'TL hours', 'All', 'I am alrea
 // bigGuy.demo('Onboarding');
 // shades.grade(baggins, 'responsive design');
 
-// baggins.sprintChallenge('modor');
+baggins.PRAssignment('modor orientation')
+baggins.sprintChallenge('modor');
 // console.log(baggins)
 
-// cheeky.speak();
+// cheeky.standUp('webeu3_patty');
+// helpful.debugsCode(ears, 'Javascript IV');
