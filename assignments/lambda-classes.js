@@ -24,7 +24,7 @@ class Instructor extends Human {
     }
 
     grade(student, subject) {
-        console.log(`${studemt} receives a perfect score on ${subject}`)
+        console.log(`${student.name} receives a perfect score on ${subject}`)
     }
 }
 
@@ -69,12 +69,16 @@ class TeamLead extends Instructor {
 
 //  Testing code
 let prime = new Human('Austen', 50, 'San Francisco');
-prime.speak();
 let primejr = new Human('Ally', 55, 'San Junipero');
-primejr.speak();
-// let shades = new Instructor('Gabe', 60, 'Utah', 'Torture', 'ketchup', `I'm going to get fired.`);
-// shades.speak()
-// let baggins = new Student('frodo', 200, 'middle earth', 'farmer', 'da fellowship', ['brooding', 'walking', 'precious'])
+// prime.speak();
+
+// primejr.speak();
+let shades = new Instructor('Gabe', 60, 'Utah', 'Torture', 'ketchup', `I'm going to get fired.`);
+// shades.demo()
+shades.grade(baggins, 'responsive design');
+let bigGuy = new Instructor('Jamie', 45, 'Carlifornia', 'React', 'Klingon', 'Trust the process');
+// bigGuy.speak()
+let baggins = new Student('frodo', 200, 'middle earth', 'farmer', 'da fellowship', ['brooding', 'walking', 'precious'])
 // baggins.sprintChallenge('modor');
 // console.log(baggins)
 // let cheeky = new TeamLead('Patrick', 50, 'bedrock', 'jokes', 'js', 'May the stretch be with you', 'webeu1', 'Gabe');
