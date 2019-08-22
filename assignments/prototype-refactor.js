@@ -120,22 +120,30 @@ class Car {
         this.canBeDriven = true;
     }
 
-    drive() {
+    drive(distance) {
         if(this.canBeDriven) {
             return this.odometer += distance;
         }
-        
+        return `I crashed at ${this.odometer} miles.`; 
+    }
+
+    crash() {
+        return this.canBeDriven = false;
+    }
+      
+    repair() {
+        return this.canBeDriven = true;
     }
 }
 
   //Testing code
 
-  // let myfirst = new Car('nissan', 'sunny');
-  // console.log(myfirst.drive(120));
-  // console.log(myfirst.drive(120));
-  // myfirst.crash();
-  // console.log(myfirst.drive(120));
-  // myfirst.repair();
-  // console.log(myfirst.drive(120));
-  // myfirst.crash();
-  // console.log(myfirst.drive(120));
+//   let myfirst = new Car('nissan', 'sunny');
+//   console.log(myfirst.drive(120));
+//   console.log(myfirst.drive(120));
+//   myfirst.crash();
+//   console.log(myfirst.drive(120));
+//   myfirst.repair();
+//   console.log(myfirst.drive(120));
+//   myfirst.crash();
+//   console.log(myfirst.drive(120));
