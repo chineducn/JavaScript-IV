@@ -51,7 +51,7 @@ class Student extends Human {
 
 class TeamLead extends Instructor {
     constructor(name, age, location, specialty, favLanguage, catchPhrase, gradClassName, favInstructor) {
-        super(name, age, location, specialty, favLanguage, catchPhrase);
+        super(name, age, location, specialty, favLanguage, catchPhrase);        
         this.gradClassName = gradClassName;
         this.favInstructor = favInstructor;
     }
@@ -75,3 +75,5 @@ class TeamLead extends Instructor {
 // let baggins = new Student('frodo', 200, 'middle earth', 'farmer', 'da fellowship', ['brooding', 'walking', 'precious'])
 // baggins.sprintChallenge('modor');
 // console.log(baggins)
+// let cheeky = new TeamLead('Patrick', 50, 'bedrock', 'jokes', 'js', 'May the stretch be with you', 'webeu1', 'Gabe');
+// cheeky.speak();
