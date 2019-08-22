@@ -20,7 +20,7 @@ Prototype Refactor
   - When pooping, the stomach should empty. 
 */
 
-//Native solution
+// //Native solution
 
 // function Person(name, age) {
 //     this.name = name;
@@ -38,7 +38,7 @@ Prototype Refactor
 //     this.stomach = [];
 //   }
 
-//Refactoring to class
+//Refactoring using class
   
 class Person {
     constructor(name, age) {
@@ -60,7 +60,7 @@ class Person {
     }
 }
   
-//Testing code
+// //Testing code
 
 //   let first = new Person('John', 45);
 //   console.log(first.greet());
@@ -85,7 +85,7 @@ class Person {
 */
 
 
-//Native solution
+// //Native solution
 
 // function Car(model, make) {
 //     this.car_model = model;
@@ -110,8 +110,7 @@ class Person {
 //   }
 
 
-//Refactoring use class
-
+//Refactoring using class
 class Car {
     constructor(model, make) {
         this.car_model = model;
@@ -136,8 +135,7 @@ class Car {
     }
 }
 
-  //Testing code
-
+// //Testing code
 //   let myfirst = new Car('nissan', 'sunny');
 //   console.log(myfirst.drive(120));
 //   console.log(myfirst.drive(120));
@@ -147,3 +145,35 @@ class Car {
 //   console.log(myfirst.drive(120));
 //   myfirst.crash();
 //   console.log(myfirst.drive(120));
+
+
+/*
+  TASK 3
+
+  - Build a Baby constructor that subclasses the Person built earlier.
+  - Babies of course inherit the ability to greet, which can be strange.
+  - Babies should have the ability to play, which persons don't.
+  - By playing, a string is returned with some text of your choosing.
+*/
+
+// // Native solution
+// function Baby(name, age) {
+//     Person.call(this, name, age);
+//   }
+  
+//   Baby.prototype = Object.create(Person.prototype);
+//   Baby.prototype.play = function() {
+//     return `${this.name} loves to play`;
+//   }
+
+// Refactoring using class
+class Baby extends Person {
+    play(game) {
+        return `${this.name} loves to play ${game}`;
+    }
+}
+
+// // Testing code  
+//   let firstborn = new Baby('chris', 5)
+//   console.log(firstborn.play('peekaboo'));
+//   console.log(firstborn.greet());
