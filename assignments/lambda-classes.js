@@ -70,16 +70,20 @@ class TeamLead extends Instructor {
 //  Testing code
 let prime = new Human('Austen', 50, 'San Francisco');
 let primejr = new Human('Ally', 55, 'San Junipero');
-// prime.speak();
-
-// primejr.speak();
 let shades = new Instructor('Gabe', 60, 'Utah', 'Torture', 'ketchup', `I'm going to get fired.`);
-// shades.demo()
-shades.grade(baggins, 'responsive design');
 let bigGuy = new Instructor('Jamie', 45, 'Carlifornia', 'React', 'Klingon', 'Trust the process');
-// bigGuy.speak()
 let baggins = new Student('frodo', 200, 'middle earth', 'farmer', 'da fellowship', ['brooding', 'walking', 'precious'])
+let ears = new Student('Legolas', 300, 'The Vale', 'being young', 'da fellowship', 'targetting')
+let cheeky = new TeamLead('Patrick', 50, 'bedrock', 'jokes', 'js', 'May the stretch be with you', 'webeu1', 'Gabe');
+let helpful = new TeamLead('Flint', 87, 'lambda', 'TL hours', 'All', 'I am already ready', 'webeu1', 'Gabe');
+
+// prime.speak();
+// primejr.speak();
+
+// bigGuy.demo('Onboarding');
+// shades.grade(baggins, 'responsive design');
+
 // baggins.sprintChallenge('modor');
 // console.log(baggins)
-// let cheeky = new TeamLead('Patrick', 50, 'bedrock', 'jokes', 'js', 'May the stretch be with you', 'webeu1', 'Gabe');
+
 // cheeky.speak();
