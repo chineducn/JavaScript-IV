@@ -28,12 +28,12 @@ class Instructor extends Human {
     }
 }
 
-class Student extends Person {
-    constructor(name, age, location, previousBackground, className, favSubjects) {
+class Student extends Human {
+    constructor(name, age, location, previousBackground, className, [favSubjects]) {
         super(name, age, location);
         this.previousBackground = previousBackground;
         this.className = className;
-        this.favSubjects = [];
+        this.favSubjects = [favSubjects];
     }
 
     listsSubjects() {
@@ -45,12 +45,33 @@ class Student extends Person {
     }
 
     sprintChallenge(subject) {
-        console.log(``)
+        console.log(`${this.name} has begun sprint challenge on ${subject}`);
     }
 }
+
+class TeamLead extends Instructor {
+    constructor(name, age, location, specialty, favLanguage, catchPhrase, gradClassName, favInstructor) {
+        super(name, age, location, specialty, favLanguage, catchPhrase);
+        this.gradClassName = gradClassName;
+        this.favInstructor = favInstructor;
+    }
+
+    standUp(channel) {
+        console.log(`${this.name} announces to ${channel}, @channel standy times`)
+    }
+
+    debugsCode({student},subject) {
+        console.log
+    }
+}
+
+// constructor(name, age, location, specialty, favLanguage, catchPhrase, gradClassName, favInstructor)
 
 //  Testing code
 // let prime = new Human('Austen', 50, 'San Francisco');
 // prime.speak();
 // let shades = new Instructor('Gabe', 60, 'Utah', 'Torture', 'ketchup', `I'm going to get fired.`);
 // shades.speak()
+// let baggins = new Student('frodo', 200, 'middle earth', 'farmer', 'da fellowship', ['brooding', 'walking', 'precious'])
+// baggins.sprintChallenge('modor');
+// console.log(baggins)
