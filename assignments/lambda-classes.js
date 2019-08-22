@@ -60,16 +60,18 @@ class TeamLead extends Instructor {
         console.log(`${this.name} announces to ${channel}, @channel standy times`)
     }
 
-    debugsCode({student},subject) {
-        console.log
+    debugsCode({Student},subject) {
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
     }
 }
 
 // constructor(name, age, location, specialty, favLanguage, catchPhrase, gradClassName, favInstructor)
 
 //  Testing code
-// let prime = new Human('Austen', 50, 'San Francisco');
-// prime.speak();
+let prime = new Human('Austen', 50, 'San Francisco');
+prime.speak();
+let primejr = new Human('Ally', 55, 'San Junipero');
+primejr.speak();
 // let shades = new Instructor('Gabe', 60, 'Utah', 'Torture', 'ketchup', `I'm going to get fired.`);
 // shades.speak()
 // let baggins = new Student('frodo', 200, 'middle earth', 'farmer', 'da fellowship', ['brooding', 'walking', 'precious'])
